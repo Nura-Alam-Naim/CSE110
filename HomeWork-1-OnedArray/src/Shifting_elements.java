@@ -10,7 +10,7 @@ public class Shifting_elements {
 
         for (int i = 0; i < shft.length; i++)
             System.out.print(arr[i] + " ");
-        input.close();
+        // input.close();
     }
 
     public static int[] shifting(int[] arr) {

@@ -1,9 +1,10 @@
 import java.util.*;
-public class Main {
+
+public class Book {
 
     public static void main(String[] args) {
         Scanner inp=new Scanner(System.in);
-        Book[] books=new Book[5];
+        Bookk[] books = new Bookk[5];
         for(int i=0;i<2;i++)
         {
             System.out.print("\u000C");
@@ -15,11 +16,13 @@ public class Main {
             System.out.print("Number of page: ");
             int page=inp.nextInt();
             inp.nextLine();
-            books[i]=new Book(isbn,title,page);
+            books[i] = new Bookk(isbn, title, page);
         }
         DisplayAll(books);
+        inp.close();
     }
-    public static void DisplayAll(Book[] books)
+
+    public static void DisplayAll(Bookk[] books)
     {
         System.out.print("\u000C");
         for(int i=0;i<2;i++)
@@ -31,21 +34,24 @@ public class Main {
             System.out.println();
         }
     }
-    public static boolean Heavier(Book b)
+
+    public static boolean Heavier(Bookk b)
     {
-        return b.getNumberOfPages()>500;
+        return b.getNumberOfPages() > 500;
     }
+
 }
-class Book {
+
+class Bookk {
     private int ISBN;
     private String bookTitle;
     private int numberOfPages;
     static private int count=0;
 
-    Book() {
+    Bookk() {
     }
 
-    Book(int isbn, String title, int pages) {
+    Bookk(int isbn, String title, int pages) {
         ISBN = isbn;
         bookTitle = title;
         numberOfPages = pages;
@@ -59,7 +65,7 @@ class Book {
         return bookTitle;
     }
 
-    public int compareTo(Book b) {
+    public int compareTo(Bookk b) {
         return Integer.compare(getNumberOfPages(), b.getNumberOfPages());
     }
 

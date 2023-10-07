@@ -9,6 +9,7 @@ public class p2 {
         long yr = dy / 365;
         long day = dy % 365;
         System.out.print(min + " minutes is approximately " + yr + " years and " + day + " days");
+        inp.close();
     }
 
 }
